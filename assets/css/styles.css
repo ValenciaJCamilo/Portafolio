@@ -5,12 +5,13 @@
   /*========== Colors ==========*/
   --hue: 174;
   --sat: 63%;
-  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color: hsl(var(--hue), var(--sat), 40%); /*Green/Blue*/
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
-  --title-color: hsl(var(--hue), 12%, 15%);
-  --text-color: hsl(var(--hue), 8%, 35%);
-  --body-color: hsl(var(--hue), 100%, 99%);
-  --container-color: #FFF;
+  --title-color: hsl(var(--hue), 12%, 15%); /*Títle h2*/
+  --text-color: hsl(var(--hue), 8%, 35%); 
+  --body-color: hsl(var(--hue), 100%, 99%); /*Bgr color*/
+  --container-color: rgb(250, 250, 250); /*Color Nav*/
+  --color-shadow-navDown: hsla(var(--hue), var(--sat), 15%, 0.15); /*Shadow NavDown*/
 
   /*========== Font and typography ==========*/
   --body-font: 'Merriweather Sans', sans-serif;
@@ -29,9 +30,42 @@
     --normal-font-size: 1rem;
   }
   .section {
-    padding: 4.5rem 0 2rem;
+    padding: 7rem 0 2rem;
   }
 }
+
+/*========== THEME ==========*/
+.change-theme{
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.change-theme:hover{
+  color:var(--first-color);
+}
+
+/*========== Variables Dark Theme ==========*/
+body.dark-theme{
+  --first-color: hsl(var(--hue), var(--sat), 40%); /*Green/Blue*/
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: rgb(255, 255, 255); /*Títle h2*/
+  --text-color: #8D8D8D;
+  --body-color: rgb(29, 29, 29); /*Bgr color*/
+  --container-color: rgb(31, 31, 31); /*Color Nav*/
+  --color-shadow-navDown: none; /*Shadow NavDown*/
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*=============== BASE ===============*/
 * {
@@ -66,6 +100,7 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+
 .section__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
@@ -115,6 +150,9 @@ img {
   font-weight: 500;
 }
 
+.section {
+  padding: 1.5rem 0 2rem;
+}
 /*=============== Here I split the navbar ===============*/
 
 @media screen and (max-width: 767px) {
@@ -128,7 +166,7 @@ img {
     bottom: 0;
     left: 0;
     background-color: var(--container-color);
-    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    box-shadow: 0 -1px 12px var(--color-shadow-navDown); /*Box shadow nav down*/
     width: 100%;
     height: 4rem;
     padding: 0 1rem;
@@ -161,7 +199,7 @@ img {
   /* display: none;*/ /* Minimalist design, hidden labels */
 }
 
-.nav__icon {
+.nav__icon,.nav__icon-theme {
   font-size: 1.5rem;
 }
 
@@ -226,9 +264,6 @@ img {
   .nav__name {
     display: none;
   }
-  .section {
-    padding: 0.8rem 0 2rem;
-}
 }
 
 
@@ -245,7 +280,10 @@ img {
     margin: 0;
   }
 
-  
+  .section {
+    padding: 6.5rem 0 2rem;
+  }
+
   .nav {
     height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
   }
@@ -290,8 +328,4 @@ img {
     font-size: 1.2rem;
     /* display: block; */ /* Minimalist design, visible labels */
   }
-
-  .section {
-    padding: 4.5rem 0 2rem;
-}
 }

@@ -52,7 +52,7 @@ var data = {
         "navPortafolio":"Portafolio",
         "navContact":"Contact",
         "titleHome":"Home",
-        "titleAbout":"About",
+        "titleAbout":"About me",
         "titleSkills":"Skills",
         "titlePortafolio":"Portafolio",
         "titleContact":"Contact"
