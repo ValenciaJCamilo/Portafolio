@@ -6,12 +6,13 @@
   --hue: 174;
   --sat: 63%;
   --first-color: hsl(var(--hue), var(--sat), 40%); /*Green/Blue*/
-  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --first-color-alt: rgb(34, 145, 133);
   --title-color: hsl(var(--hue), 12%, 15%); /*Títle h2*/
   --text-color: hsl(var(--hue), 8%, 35%); 
   --body-color: hsl(var(--hue), 100%, 99%); /*Bgr color*/
-  --container-color: rgb(250, 250, 250); /*Color Nav*/
+  --container-color: rgb(255, 255, 255); /*Color Nav*/
   --color-shadow-navDown: hsla(var(--hue), var(--sat), 15%, 0.15); /*Shadow NavDown*/
+  --background-home-img: linear-gradient(0deg, rgba(255,255,255,1) 27%, rgba(38,166,153,1) 86%);
 
   /*========== Font and typography ==========*/
   --body-font: 'Merriweather Sans', sans-serif;
@@ -41,6 +42,7 @@
   transition: .3s;
 }
 
+
 .change-theme:hover{
   color:var(--first-color);
 }
@@ -54,17 +56,8 @@ body.dark-theme{
   --body-color: rgb(29, 29, 29); /*Bgr color*/
   --container-color: rgb(31, 31, 31); /*Color Nav*/
   --color-shadow-navDown: none; /*Shadow NavDown*/
+  --background-home-img: linear-gradient(0deg, rgb(29, 29, 29) 27%, rgba(38,166,153,1) 86%);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /*=============== BASE ===============*/
@@ -99,6 +92,12 @@ img {
   height: auto;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .section__title {
@@ -117,8 +116,17 @@ img {
   max-width: 968px;
   margin-left: 1rem;
   margin-right: 1rem;
+  
 }
 
+.grid{
+  display: grid;
+  gap:1.25rem;
+}
+
+.main {
+  overflow: hidden;
+}
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
@@ -153,6 +161,7 @@ img {
 .section {
   padding: 1.5rem 0 2rem;
 }
+
 /*=============== Here I split the navbar ===============*/
 
 @media screen and (max-width: 767px) {
@@ -174,6 +183,7 @@ img {
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
     transition: .4s;
+    z-index: 1;
   }
 }
 
@@ -203,6 +213,9 @@ img {
   font-size: 1.5rem;
 }
 
+.nav__icon-theme{
+  color:var(--title-color);
+}
 /*Active link*/
 .active-link {
   position: relative;
@@ -231,6 +244,7 @@ img {
     border-radius: 50px;
     justify-content: center;
     align-self: center;
+    transition: .4s;
 }
 
 .langWrap a{
@@ -253,8 +267,213 @@ img {
     font-weight: 800;
     border-color:none;
     border:1px solid var(--first-color);
-    transition: .4s;
+    transition: .2s;
 }
+
+.a-lang{
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.lang-active
+{
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+/*=============== HOME ===============*/
+/*--------Text---------*/
+.home__container{
+  position:relative;
+  row-gap: 2rem;
+  /*padding-top: 2rem;*/
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__greeting,
+.home__education{
+  font-size: var(--normal-font-size);
+  font-weight: 400;
+}
+
+.home__greeting{
+  display: block;
+  color:var(--text-color);
+}
+
+.home__education{
+  color:var(--text-color);
+  margin-bottom: 2.5rem;
+}
+
+.home__name{
+  color:var(--title-color);
+  font-size: var(--h1-font-size);
+  line-height: 2.2rem;
+  margin:1rem;
+}
+
+/*--------Image---------*/
+.home__handle{
+  justify-self: center;
+  width: calc(30vh);
+  height: calc(30vh);
+  background: var(--background-home-img);
+  border-radius: 10rem 10rem 1rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.home__img{
+  width:inherit;
+  border-radius: 10rem 10rem 1rem 1rem;
+  overflow: hidden;
+}
+
+.home__buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1.5rem;
+}
+
+/*--------Social Media---------*/
+.home__social{
+  row-gap: .5rem;
+  display: flex;
+}
+
+.home__social-link
+{
+  width:max-content;
+  background-color:var(--container-color);
+  color:var(--first-color);
+  padding: 0.4rem;
+  border-radius: 50%;
+  display:flex;
+  font-size:2rem;
+  transition: .4s;
+  margin:0 10px 0 10px;
+}
+
+.home__social-link:hover{
+  background-color:var(--first-color);
+  color:#fff;
+}
+
+.home__social-link.linkedin:hover
+{
+  background-color:#2766B2;
+}
+
+.home__social-link.github:hover
+{
+  background-color:#333;
+}
+
+.home__social-link.twitter:hover
+{
+  background-color:#1C99E6;
+}
+
+
+
+
+/*--------Buttons---------*/
+.button{
+  display:inline-block;
+  background-color:var(--first-color);
+  color:var(--body-color);
+  padding:.75rem 1rem;
+  border-radius: .5rem;
+  font-weight: 500;
+  transition: .4s;
+}
+
+.button:hover{
+  background-color:var(--first-color-alt);
+  color:var(--body-color);
+}
+.button--ghost{
+  background-color:transparent;
+  border:2px solid var(--first-color);
+  color:var(--first-color);
+}
+
+
+
+
+
+
+
+
+
+.home-all{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*gap:calc(7vh);*/
+  height:calc(100vh);
+  gap:20px;
+}
+
+.prueba{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*=============== MEDIA QUERIES ===============*/
@@ -279,7 +498,7 @@ img {
   body {
     margin: 0;
   }
-
+  
   .section {
     padding: 6.5rem 0 2rem;
   }
@@ -301,7 +520,6 @@ img {
     color: var(--first-color);
   }
 
-  /* First design, remove if you choose the minimalist design */
   .active-link::before {
     content: '';
     position: absolute;
@@ -325,7 +543,12 @@ img {
     margin-right: auto;
   }
   .nav__name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     /* display: block; */ /* Minimalist design, visible labels */
   }
+  .home__greeting,
+  .home__education{
+  font-size: 1.4rem;
 }
+}
+

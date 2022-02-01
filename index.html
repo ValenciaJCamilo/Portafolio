@@ -72,7 +72,7 @@
             <!--=============== LANGUAGES ===============-->
             <div class="container-lang">
                 <div class="langWrap" title="Idioma">
-                    <a href="#" language='spanish' class="a-lang lang-active">ES</a>
+                    <a href="#" language='spanish' class="a-lang lang-active ">ES</a>
                     <a href="#" language='english' class="a-lang">EN</a>
                 </div>
             </div>            
@@ -81,10 +81,44 @@
             </nav>
         </header>
 
-        <main>
+        <main class="main">
             <!--=============== HOME ===============-->
             <section class="container section section__height" id="home">
-                <h2 class="section__title titleHome">Inicio</h2>
+                <div class="home__container container grid container-home">
+                    <div class="home-all">
+                    <div class="home__data">
+                        <!--HOME TEXT-->
+                        <span class="home__greeting homeGreeting">Hola, yo soy</span>
+                        <h1 class="home__name homeName">Camilo Valencia</h1>
+                        <h3 class="home__education homeEducation">Desarrollador Frontend</h3>
+                        <!--HOME BUTTONS-->
+                        <div class="home__buttons">
+                            <a download="" href="assets/pdf/CV - Juan Camilo Valencia Silva - 2022 ES.pdf" class="button button--ghost homeButtonDownload">Descargar CV</a>
+                            <a href="#about" class="button homeButtonAbout">Conóceme más</a>
+                        </div>
+                    </div>
+                    <!--PICS&NETWORKS-->
+                    <div class="prueba">
+                        <!--HOME PICTURE-->
+                        <div class="home__handle">
+                            <img src="assets/img/profile2.png" alt="Foto de inicio" class="home__img">
+                        </div>
+                        <!--HOME SOCIAL MEDIA LINKS-->
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/ValenciaJCamilo/" target="_blank" alt="LinkedIn" title="LinkedIn" class="home__social-link linkedin">
+                                <i class="bx bxl-linkedin-square"></i>
+                            </a>
+                            <a href="https://github.com/ValenciaJCamilo" target="_blank" alt="GitHub" title="GitHub" class="home__social-link github">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                            <a href="https://twitter.com/Valenciajcamilo" target="_blank" alt="Twitter" title="Twitter" class="home__social-link twitter">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+                <!--<h2 class="section__title titleHome">Inicio</h2>-->
             </section>
 
             <!--=============== ABOUT ===============-->
