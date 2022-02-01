@@ -419,7 +419,7 @@ button {
   align-items: center;
   justify-content: center;
   /*gap:calc(7vh);*/
-  height:calc(100vh);
+  height:calc(100vh - 3rem);
   gap:20px;
 }
 
