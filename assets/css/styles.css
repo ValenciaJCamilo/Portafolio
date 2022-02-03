@@ -138,7 +138,6 @@ button {
   max-width: 1000px; /*Full width page*/
   margin-left: 1rem;
   margin-right: 1rem;
-  
 }
 
 .grid{
@@ -149,6 +148,7 @@ button {
 .main {
   overflow: hidden;
 }
+
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
@@ -168,7 +168,6 @@ button {
   justify-content: space-between;
   align-items: center;
   width: auto;
-  
 }
 
 .nav__img {
@@ -208,7 +207,6 @@ button {
   {
     position:static;
   }
-
 
   .nav__menu {
     position: fixed;
