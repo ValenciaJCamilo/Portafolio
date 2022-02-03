@@ -146,6 +146,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: auto;
 }
 
 .nav__img {
@@ -253,7 +254,6 @@ button {
 {
   display: flex;
   justify-content: center;
-  margin-right: 10px;
 }
 
 .langWrap
@@ -334,6 +334,8 @@ button {
   font-size: 1.17rem;
   font-weight: 400;
 }
+
+
 
 .home__greeting{
   display: block;
