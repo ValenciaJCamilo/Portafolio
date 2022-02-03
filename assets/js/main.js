@@ -99,5 +99,3 @@ sr.reveal(`.home__education`)
 sr.reveal(`.home__buttons`,{delay:3900})
 sr.reveal(`.home__handle`,{delay:3900})
 sr.reveal(`.home__social`,{delay:3900,origin:'bottom'})
-
-

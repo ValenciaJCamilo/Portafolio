@@ -99,6 +99,27 @@ button {
   outline: none;
 }
 
+/*=============== SCROLLBAR ===============*/
+/*General width*/
+::-webkit-scrollbar{
+  width:10px;  
+}
+/*Scrollbar full body*/
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 10px var(--body-color);
+  background-color: var(--body-color);
+}
+/*Scrollbar main line*/
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color:var(--title-color);
+}
+/*Scrollbar main line hover & active*/
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active{
+  background-color:var(--first-color);
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .section__title {
@@ -147,6 +168,7 @@ button {
   justify-content: space-between;
   align-items: center;
   width: auto;
+  
 }
 
 .nav__img {
@@ -186,6 +208,7 @@ button {
   {
     position:static;
   }
+
 
   .nav__menu {
     position: fixed;
