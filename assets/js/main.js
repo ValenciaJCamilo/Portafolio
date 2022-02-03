@@ -94,8 +94,10 @@ const sr = ScrollReveal({
 
 
 sr.reveal(`.home__greeting`)
+/*sr.reveal(`.home__name`,{delay:500,origin:'left',distance:'20px',})*/
 sr.reveal(`.home__education`)
 sr.reveal(`.home__buttons`,{delay:3900})
 sr.reveal(`.home__handle`,{delay:3900})
 sr.reveal(`.home__social`,{delay:3900,origin:'bottom'})
+
 
