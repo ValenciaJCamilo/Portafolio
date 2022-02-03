@@ -69,7 +69,7 @@ const typed = new Typed('.typed', {
 
 	//stringsElement: '#text-education', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 50, // Velocidad en mlisegundos para poner una letra,
-	startDelay: 1300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
+	startDelay: 1000, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
 	backSpeed: 18, // Velocidad en milisegundos para borrrar una letra,
 	smartBackspace: true, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
 	shuffle: false, // Alterar el orden en el que escribe las palabras.
@@ -93,9 +93,22 @@ const sr = ScrollReveal({
 })
 
 
-sr.reveal(`.home__greeting`)
 /*sr.reveal(`.home__name`,{delay:500,origin:'left',distance:'20px',})*/
-sr.reveal(`.home__education`)
-sr.reveal(`.home__buttons`,{delay:3900})
-sr.reveal(`.home__handle`,{delay:3900})
-sr.reveal(`.home__social`,{delay:3900,origin:'bottom'})
+sr.reveal(`.home__greeting`)
+sr.reveal(`.home__name`,{delay:500,distance:"30px",origin:'bottom'})
+sr.reveal(`.home__education`,{delay:1000})
+sr.reveal(`.home__buttons`,{delay:1500})
+sr.reveal(`.home__handle`,{delay:2000})
+sr.reveal(`.home__social`,{delay:2000,origin:'bottom'})
+
+
+/*=============== LOADING ANIMATION ===============*/
+function loader(){
+    document.querySelector('.loader-container').classList.add('fade-out');
+  }
+  
+  function fadeOut(){
+    setInterval(loader, 1000);
+  }
+  
+  window.onload = fadeOut();

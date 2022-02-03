@@ -70,6 +70,7 @@ body.dark-theme{
 
 html {
   scroll-behavior: smooth;
+  transition: all 200ms;
 }
 
 body {
@@ -98,6 +99,40 @@ button {
   border: none;
   outline: none;
 }
+
+/*=============== INITIAL ANIMATION TRANSITION LOADER ===============*/
+.loader-container{
+  position: fixed;
+  top:0; left:0;
+  z-index: 10000;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 1;
+	}
+  50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.loader-container.fade-out{
+  top:-120%;
+}
+
 
 /*=============== SCROLLBAR ===============*/
 /*General width*/
@@ -324,6 +359,7 @@ button {
     text-align: center;
     margin:0;
     border:1px solid transparent;
+
 }
 
 .langWrap a.lang-active
@@ -334,6 +370,7 @@ button {
     border-color:none;
     border:1px solid var(--first-color);
     transition: .2s;
+
 }
 
 .a-lang{
@@ -408,11 +445,7 @@ button {
   color:var(--title-color);
   text-shadow: 4px 4px 2px var(--first-color);
   display: inline-block;
-  -webkit-transition: transform 200ms;
-  -webkit-transition: -webkit-transform 200ms;
-  transition: all 200ms;
 }
-
 
 
 
