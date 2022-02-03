@@ -12,10 +12,11 @@
         <!--=============== GOOGLE FONTS ===============-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">    
         <!--=============== BOXICONS ===============-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
+        <!--=============== ANIMATE.CSS ===============-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
  
@@ -88,16 +89,20 @@
                         <div class="home__data">
                             <!--HOME TEXT-->
                             <span class="home__greeting homeGreeting">Hola, yo soy</span>
-                            <h1 class="home__name homeName">Camilo Valencia</h1>
-                            <h3 class="home__education homeEducation">Desarrollador Frontend</h3>
+                            <h1 id="square" class="home__name homeName animate__animated animate__zoomInDown animate__delay-1s">Camilo Valencia</h1>
+                            <h3 class="home__education homeEducation">ㅤ
+                                <span class="typed"></span>ㅤ
+                            </h3> 
                             <!--HOME BUTTONS-->
                             <div class="home__buttons">
-                                <a download="" href="assets/pdf/CV - Juan Camilo Valencia Silva - 2022 ES.pdf" class="button button--ghost homeButtonDownload">Descargar CV</a>
-                                <a href="#about" class="button homeButtonAbout">Conóceme más</a>
+                                <a download="" href="assets/pdf/CV - Juan Camilo Valencia Silva - 2022 ES.pdf" class="button button--ghost homeButtonDownload">Descargar CV 
+                                </a> 
+            
+                                <a href="#about" class="button homeButtonAbout">Conóceme más<span></span></a>
                             </div>
                         </div>
                         <!--PICS&NETWORKS-->
-                        <div class="prueba">
+                        <div class="picsNet-Container">
                             <!--HOME PICTURE-->
                             <div class="home__handle">
                                 <img src="assets/img/profile2.png" alt="Foto de inicio" class="home__img">
@@ -143,7 +148,14 @@
         
 
         <!--=============== JS ===============-->
-        <script src="assets/js/main.js"></script>
+        <!--=============== ScrollReveal ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== Language ===============-->
         <script src="assets/js/lang.js"></script>
+        <!--=============== Typing ===============-->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <!--=============== Main ===============-->
+        <script src="assets/js/main.js"></script>
+
     </body>
 </html>

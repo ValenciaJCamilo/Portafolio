@@ -52,26 +52,25 @@ var data = {
         "titleContact":"Contacto",
         "homeGreeting":"Hola, yo soy",
         "homeName":"Camilo Valencia",
-        "homeEducation":"Desarrollador Frontend",
+        "homeEducation":"ㅤDesarrollador Frontendㅤ",
         "homeButtonDownload":"Descargar CV",
-        "homeButtonAbout":"Conóceme más"
+        "homeButtonAbout":"Conóceme más",
     },
     "english":{
         "navHome":"Home",
         "navAbout":"About",
         "navSkills":"Skills",
-        "navPortafolio":"Portafolio",
+        "navPortafolio":"Portfolio",
         "navContact":"Contact",
         "titleHome":"Home",
         "titleAbout":"About me",
         "titleSkills":"Skills",
-        "titlePortafolio":"Portafolio",
+        "titlePortafolio":"Portfolio",
         "titleContact":"Contact",
         "homeGreeting":"Hi, I am",
         "homeName":"Camilo Valencia",
-        "homeEducation":"Frontend Developer",
+        "homeEducation":"ㅤFrontend Developerㅤ",
         "homeButtonDownload":"Download CV",
-        "homeButtonAbout":"Know me better"
-
+        "homeButtonAbout":"Know me better",
     }
 }
