@@ -15,8 +15,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">    
         <!--=============== BOXICONS ===============-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-        <!--=============== ANIMATE.CSS ===============-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
  
@@ -71,11 +69,12 @@
                         </li>
                     </ul>
                 </div>
-            <!--=============== THEME CHANGE BUTTON ===============-->
-            <i class='bx bx-moon change-theme nav__icon-theme' id="theme-button" title="Theme"></i>
 
-            <!--=============== LANGUAGES ===============-->
+            <!--=============== LANGUAGES & THEME ===============-->
             <div class="container-lang">
+                <div class="themeWrap">
+                    <i class='bx bx-moon change-theme nav__icon-theme' id="theme-button" title="Theme"></i>
+                </div>
                 <div class="langWrap" title="Idioma">
                     <a href="#" language='spanish' class="a-lang lang-active ">ES</a>
                     <a href="#" language='english' class="a-lang">EN</a>
@@ -89,7 +88,25 @@
         <main class="main">
             <!--=============== HOME ===============-->
             <section class="container section section__height" id="home">
-                    <div class="home-all">
+                <!--=============== BGR DECORATIONS ===============-->
+                <div class="overlay overlay-lg">
+                    <img src="./assets/img/letters.png" class="letters" alt="Background letters decoration">
+                </div>
+
+                    <div class="home-all curve">
+                        <div class="shapes shapes-lg">
+                            <!-- <i class='shape square bx bx-square'></i> -->
+                            <!-- <i class='shape square1 bx bx-square'></i> -->
+                            <i class='shape circle bx bx-circle'></i>   
+                            <!-- <i class='shape circle1 bx bx-circle'></i> -->
+                            <i class='shape circle-half bx bx-circle-half' ></i>
+                            <!-- <i class='shape circle-half1 bx bx-circle-half' ></i> -->
+                            <!-- <i class='shape circle-quarter bx bx-circle-quarter' ></i> -->
+                            <!-- <i class='shape circle-quarter1 bx bx-circle-quarter' ></i>   -->
+                            <!-- <i class='shape line bx bx-minus'></i>  -->
+                            <i class='shape arrow bx bx-chevron-up'></i>
+                        </div>     
+
                         <div class="home__data">
                             <!--HOME TEXT-->
                             <span class="home__greeting homeGreeting">Hola, yo soy</span>
@@ -131,7 +148,7 @@
 
             <!--=============== ABOUT ===============-->
             <section class="container section section__height" id="about">
-                <h2 class="section__title titleAbout">Sobre mí</h2>
+                    <h2 class="section__title titleAbout">Sobre mí</h2>
             </section>
 
             <!--=============== SKILLS ===============-->

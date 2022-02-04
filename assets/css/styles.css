@@ -170,7 +170,7 @@ button {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 1000px; /*Full width page*/
+  max-width: 1100px; /*Full width page*/
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -186,6 +186,7 @@ button {
 
 /*=============== HEADER ===============*/
 .header {
+  /*fixed*/
   position: fixed;
   top: 0;
   left: 0;
@@ -193,6 +194,7 @@ button {
   background-color: var(--container-color);
   z-index: var(--z-fixed);
   transition: .4s;
+  overflow:hidden;
 }
 
 /*=============== NAV ===============*/
@@ -343,9 +345,16 @@ button {
 {
     display: flex;
     border-radius: 50px;
-    justify-content: center;
+    justify-content: flex-end;
     align-self: center;
     transition: .4s;
+    width:120px;
+}
+
+.themeWrap
+{
+  display: flex;
+  align-content: center;
 }
 
 .langWrap a{
@@ -370,7 +379,6 @@ button {
     border-color:none;
     border:1px solid var(--first-color);
     transition: .2s;
-
 }
 
 .a-lang{
@@ -392,6 +400,72 @@ button {
   transition: .3s;
 }
 
+
+/*=============== BGR LETTERS ===============*/
+.overlay{
+  width: inherit;
+  height: inherit;
+  margin:0;
+  padding:0;
+  position: absolute;
+}
+
+.letters{
+  width:10rem;
+  overflow: hidden;
+  top:0;
+  left: 0;
+  opacity:0.1;
+}
+
+/*=============== BGR SHAPES ===============*/
+.shapes .shape{
+  width:initial;
+  opacity: 0.2;
+  position:absolute;
+  color: var(--title-color);
+  font-size: 1.5rem;
+}
+
+.square{
+  left:15%;
+  top:71%;
+  transform: rotate(10deg);
+} 
+.square1{
+  right:10%;
+  top:10%;
+  transform: rotate(140deg);
+} 
+.circle{
+  right:10%;
+  bottom:16%;
+}
+.circle1{
+  top:3%;
+  left:23%;
+}
+.circle-half{
+  top:45%;
+  left: 17%;
+  transform: rotate(45deg);
+}
+.line{
+  bottom:50%;
+  right:20%;
+  transform: rotate(130deg);
+}
+.circle-quarter{
+  right:10%;
+  top:33%;
+  transform: rotate(30deg);
+}
+.arrow{
+  transform: rotate(30deg);
+  right:30%;
+  top:10%;
+}
+
 /*=============== HOME ===============*/
 /*--------Text---------*/
 .home__container{
@@ -408,6 +482,8 @@ button {
   /*gap:calc(7vh);*/
   height:calc(100vh - 3rem);
   gap:20px;
+  position:relative;
+  width:100%;
 }
 
 .home__data{
@@ -468,8 +544,8 @@ button {
 /*--------Image---------*/
 .home__handle{
   justify-self: center;
-  width: calc(30vh);
-  height: calc(30vh);
+  width: calc(32vh);
+  height: calc(32vh);
   border-radius: 10rem 10rem 1rem 1rem;
   display: flex;
   align-items: flex-end;
@@ -482,6 +558,7 @@ button {
   width:inherit;
   border-radius: 10rem 10rem 1rem 1rem;
   overflow: hidden;
+  
 }
 
 .home__buttons{
@@ -584,9 +661,7 @@ button {
   background-color:transparent;
   border:2px solid var(--first-color);
   color:var(--first-color);
-}
-
-.button--ghost {
+  background: (var(--container-color));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -643,6 +718,13 @@ button {
     justify-content: center;
     column-gap: 3rem;
   }
+
+}
+
+@media screen and (max-width: 576px) {
+ .overlay{
+   display: none;
+ }
 }
 
 @media screen and (min-width: 767px) {
@@ -713,3 +795,12 @@ button {
   margin:3rem;
 }
 }
+
+
+
+
+
+
+
+
+

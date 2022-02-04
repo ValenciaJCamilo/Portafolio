@@ -92,17 +92,22 @@ const sr = ScrollReveal({
     //reset:true,
 })
 
-
 /*sr.reveal(`.home__name`,{delay:500,origin:'left',distance:'20px',})*/
 sr.reveal(`.home__greeting`)
 sr.reveal(`.home__name`,{delay:500,distance:"30px",origin:'bottom'})
 sr.reveal(`.home__education`,{delay:1000})
-sr.reveal(`.home__buttons`,{delay:1500})
-sr.reveal(`.home__handle`,{delay:2000})
-sr.reveal(`.home__social`,{delay:2000,origin:'bottom'})
+sr.reveal(`.letters`,{delay:500,distance:"50px",origin:'left'})
+sr.reveal(`.circle-half`,{delay:500,distance:"100px",origin:'top'})
+sr.reveal(`.circle`,{delay:1000,distance:"90px",origin:'bottom'})
+sr.reveal(`.arrow`,{delay:1500,distance:"320px",origin:'left'})
+sr.reveal(`.home__buttons`,{delay:1800})
+sr.reveal(`.home__handle`,{delay:1800})
+sr.reveal(`.home__social`,{delay:1800,origin:'bottom'})
+
 
 
 /*=============== LOADING ANIMATION ===============*/
+/*If we don't put this function, the navbar isn't gonna work, will be blocked*/
 function loader(){
     document.querySelector('.loader-container').classList.add('fade-out');
   }
