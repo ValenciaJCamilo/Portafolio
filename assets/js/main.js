@@ -96,13 +96,22 @@ const sr = ScrollReveal({
 sr.reveal(`.home__greeting`)
 sr.reveal(`.home__name`,{delay:500,distance:"30px",origin:'bottom'})
 sr.reveal(`.home__education`,{delay:1000})
-sr.reveal(`.letters`,{delay:500,distance:"50px",origin:'left'})
-sr.reveal(`.circle-half`,{delay:500,distance:"100px",origin:'top'})
-sr.reveal(`.circle`,{delay:1000,distance:"90px",origin:'bottom'})
-sr.reveal(`.arrow`,{delay:1500,distance:"320px",origin:'left'})
+sr.reveal(`.letters`,{delay:500,distance:"50px",origin:'top'})
+sr.reveal(`.circle-half`,{delay:500,distance:"100px",origin:'top',reset:true})
+sr.reveal(`.square`,{delay:1000,distance:"90px",origin:'right',reset:true})
+sr.reveal(`.arrow`,{delay:1500,distance:"320px",origin:'left',reset:true})
 sr.reveal(`.home__buttons`,{delay:1800})
 sr.reveal(`.home__handle`,{delay:1800})
 sr.reveal(`.home__social`,{delay:1800,origin:'bottom'})
+/*About*/
+sr.reveal(`.titleAbout`,{origin:'bottom'})
+sr.reveal(`.about__image`,{origin:'left'})
+sr.reveal(`.aboutTxt`,{origin:'right'})
+sr.reveal(`.aboutMsg1`,{origin:'right',distance:"200px",reset:true})
+sr.reveal(`.aboutMsg2`,{origin:'left',distance:"200px",reset:true})
+sr.reveal(`.palette`,{distance:"100px",origin:'left',reset:true})
+sr.reveal(`.hive`,{distance:"90px",origin:'bottom',reset:true})
+sr.reveal(`.happy`,{distance:"200px",origin:'top',reset:true})
 
 
 
@@ -110,10 +119,38 @@ sr.reveal(`.home__social`,{delay:1800,origin:'bottom'})
 /*If we don't put this function, the navbar isn't gonna work, will be blocked*/
 function loader(){
     document.querySelector('.loader-container').classList.add('fade-out');
+}
+
+function fadeOut(){
+setInterval(loader, 1000);
+}
+
+window.onload = fadeOut();
+
+
+/*=============== GSAP & SCROLLTRIGGER ===============*/
+let bgImage = document.querySelector(".about__phrase_bgr");
+//  Now registering thescrollTrigger plugin to gsap
+gsap.registerPlugin(ScrollTrigger);
+// Now we are going to animate
+
+gsap.fromTo(
+  bgImage,
+  {
+    clipPath: "circle(3% at 77% 40%)",
+  },
+  {
+    clipPath: "circle(75% at 50% 50%)",
+    ease: "none",
+    //  We want to do that animation on scroll
+    scrollTrigger: {
+      trigger: bgImage,
+      scrub: 1,
+      start: "top bottom",
+      end: "bottom center-=-100",
+      scale:0.5,
+      duration:4,
+    },
   }
-  
-  function fadeOut(){
-    setInterval(loader, 1000);
-  }
-  
-  window.onload = fadeOut();
+);
+

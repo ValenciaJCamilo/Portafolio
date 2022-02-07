@@ -29,7 +29,7 @@
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Camilo</a>
+                <a href="#" class="nav__logo">CV</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -80,8 +80,6 @@
                     <a href="#" language='english' class="a-lang">EN</a>
                 </div>
             </div>            
-
-            <!--<img src="assets/img/perfil.png" alt="" class="nav__img"-->    
             </nav>
         </header>
 
@@ -92,18 +90,10 @@
                 <div class="overlay overlay-lg">
                     <img src="./assets/img/letters.png" class="letters" alt="Background letters decoration">
                 </div>
-
                     <div class="home-all curve">
                         <div class="shapes shapes-lg">
-                            <!-- <i class='shape square bx bx-square'></i> -->
-                            <!-- <i class='shape square1 bx bx-square'></i> -->
-                            <i class='shape circle bx bx-circle'></i>   
-                            <!-- <i class='shape circle1 bx bx-circle'></i> -->
+                            <i class='shape square bx bx-square'></i>
                             <i class='shape circle-half bx bx-circle-half' ></i>
-                            <!-- <i class='shape circle-half1 bx bx-circle-half' ></i> -->
-                            <!-- <i class='shape circle-quarter bx bx-circle-quarter' ></i> -->
-                            <!-- <i class='shape circle-quarter1 bx bx-circle-quarter' ></i>   -->
-                            <!-- <i class='shape line bx bx-minus'></i>  -->
                             <i class='shape arrow bx bx-chevron-up'></i>
                         </div>     
 
@@ -126,48 +116,78 @@
                         <div class="picsNet-Container">
                             <!--HOME PICTURE-->
                             <div class="home__handle">
-                                <img src="assets/img/profile2.png" alt="Foto de inicio" class="home__img">
+                                <img src="./assets/img/homeImg.svg"class="home__img" alt="Foto principal">
                             </div>
                             <!--HOME SOCIAL MEDIA LINKS-->
                             <div class="home__social">
-                                <a href="https://www.linkedin.com/in/ValenciaJCamilo/" target="_blank" alt="LinkedIn" title="LinkedIn" class="home__social-link linkedin">
+                                <a href="https://www.linkedin.com/in/ValenciaJCamilo/" target="_blank" rel="noreferrer noopener" alt="LinkedIn" title="LinkedIn" class="home__social-link linkedin">
                                     <i class="bx bxl-linkedin-square"></i>
                                 </a>
-                                <a href="https://github.com/ValenciaJCamilo" target="_blank" alt="GitHub" title="GitHub" class="home__social-link github">
+                                <a href="https://github.com/ValenciaJCamilo" target="_blank" rel="noreferrer noopener" alt="GitHub" title="GitHub" class="home__social-link github">
                                     <i class="bx bxl-github"></i>
                                 </a>
-                                <a href="https://twitter.com/Valenciajcamilo" target="_blank" alt="Twitter" title="Twitter" class="home__social-link twitter">
+                                <a href="https://twitter.com/Valenciajcamilo" target="_blank" rel="noreferrer noopener"
+                                alt="Twitter" title="Twitter" class="home__social-link twitter">
                                     <i class="bx bxl-twitter"></i>
                                 </a>
                             </div>  
                         </div>
                     </div>
                 </div>
-                <!--<h2 class="section__title titleHome">Inicio</h2>-->
             </section>
 
             <!--=============== ABOUT ===============-->
-            <section class="container section section__height" id="about">
-                    <h2 class="section__title titleAbout">Sobre mí</h2>
+            <section class="container section" id="about">
+                <h3 class="subtitleSection">:)</h3>
+                <h2 class="section__title titleAbout" >Sobre mí <span></span></h2>
+                    <div class="about__container ">
+                        <!--SEPARACIÓN 1 -->
+                        <div class="about__main">
+                            <img src="./assets/img/aboutImg.svg" class="about__image" alt="Imagen sección 'Sobre mí'">
+                            <div class="about__info">
+                                <p class="about__txt aboutTxt">Me encuentro cursando mi último año de Ingeniería de Sistemas y estoy enfocado en el <span class="about__txt_web">desarrollo web</span>, en la experiencia de usuario <span class="about__txt-ui">(UX)</span> y en el diseño de interfaces <span class="about__txt-ui">(UI)</span>. Mi pasión es poder brindarle a las personas una experiencia bastante agradable al momento de navegar por la web, todo esto con el uso de nuevas tecnologías. </p>
+                            </div>
+                        </div>
+                        <!--SEPARACIÓN 2 -->
+                        <div class="about__phrase triangle-container">
+                            <img src="./assets/img/aboutBgr.png" class="about__phrase_bgr triangle" alt="Background phrase img">
+                            <div class="shapes shapes-lg">
+                                <i class='shape hive bx bx-hive'></i>
+                                <i class='shape palette bx bx-palette' ></i>
+                                <i class='shape happy bx bx-happy-beaming'></i>
+                            </div>     
+                            <p class="about__Message_p1 aboutMsg1">"Nunca pares</p>
+                            <p class="about__Message_p2 aboutMsg2">de aprender"</p>
+                        </div>
+                    </div>
             </section>
 
             <!--=============== SKILLS ===============-->
             <section class="container section section__height" id="skills">
+                <h3 class="subtitleSection">Trato de mejorar</h3>
                 <h2 class="section__title titleSkills">Habilidades</h2>
+
+               
             </section>
 
             <!--=============== PORTFOLIO ===============-->
             <section class="container section section__height" id="portfolio">
+                <h3 class="subtitleSection">Mi trabajo</h3>
                 <h2 class="section__title titlePortafolio">Portafolio</h2>
             </section>
 
             <!--=============== CONTACTME ===============-->
             <section class="container section section__height" id="contactme">
+                <h3 class="subtitleSection">¿Qué sigue?</h3>
                 <h2 class="section__title titleContact">Contáctame</h2>
             </section>
         </main>
 
         <!--=============== JS ===============-->
+        <!--=============== GSAP ===============-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <!--=============== ScrollTrigger ===============-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
         <!--=============== ScrollReveal ===============-->
         <script src="https://unpkg.com/scrollreveal"></script>
         <!--=============== Language ===============-->
@@ -176,6 +196,5 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <!--=============== Main ===============-->
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>
