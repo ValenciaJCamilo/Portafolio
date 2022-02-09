@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="shortcut icon" href="./assets/img/icon.png">
         <!--=============== SEO TAGS ===============-->
         <meta name="description" content="Hey, bienvenido a mi sitio web personal, soy Camilo, estudiante de Ingeniería de Sistemas, apasionado por el Desarrollo Web, y enfocado en Frontend.">
         <meta name="keywords" content="Web Developer, Web Development, Camilo Valencia, Portafolio, Curriculum Vitae, CSS, HTML, CSS, JavaScript, Frontend Developer, Frontend Development, UI, UX, Experiencia de usuario, Desarrollador Web, Sitio web personal, Hoja de vida, Programador, Diseñador, HTML semántico">
@@ -108,15 +108,15 @@
                             <div class="home__buttons">
                                 <a download="" href="assets/pdf/CV - Juan Camilo Valencia Silva - 2022 ES.pdf" class="button button--ghost homeButtonDownload">Descargar CV 
                                 </a> 
-            
-                                <a href="#about" class="button homeButtonAbout">Conóceme más<span></span></a>
+                                <a href="#about" class="button homeButtonAbout">Conóceme más</a>
                             </div>
                         </div>
                         <!--PICS&NETWORKS-->
                         <div class="picsNet-Container">
                             <!--HOME PICTURE-->
                             <div class="home__handle">
-                                <img src="./assets/img/homeImg.svg"class="home__img" alt="Foto principal">
+                                <img src="./assets/img/sections/homeImg.svg"class="home__img" alt="Foto principal">
+                                    
                             </div>
                             <!--HOME SOCIAL MEDIA LINKS-->
                             <div class="home__social">
@@ -143,14 +143,14 @@
                     <div class="about__container ">
                         <!--SEPARACIÓN 1 -->
                         <div class="about__main">
-                            <img src="./assets/img/aboutImg.svg" class="about__image" alt="Imagen sección 'Sobre mí'">
+                            <img src="./assets/img/sections/aboutImg.svg" class="about__image" alt="Imagen sección 'Sobre mí'">
                             <div class="about__info">
                                 <p class="about__txt aboutTxt">Me encuentro cursando mi último año de Ingeniería de Sistemas y estoy enfocado en el <span class="about__txt_web">desarrollo web</span>, en la experiencia de usuario <span class="about__txt-ui">(UX)</span> y en el diseño de interfaces <span class="about__txt-ui">(UI)</span>. Mi pasión es poder brindarle a las personas una experiencia bastante agradable al momento de navegar por la web, todo esto con el uso de nuevas tecnologías. </p>
                             </div>
                         </div>
                         <!--SEPARACIÓN 2 -->
                         <div class="about__phrase triangle-container">
-                            <img src="./assets/img/aboutBgr.png" class="about__phrase_bgr triangle" alt="Background phrase img">
+                            <img src="./assets/img/sections/aboutBgr.png" class="about__phrase_bgr triangle" alt="Background phrase img">
                             <div class="shapes shapes-lg">
                                 <i class='shape hive bx bx-hive'></i>
                                 <i class='shape palette bx bx-palette' ></i>
@@ -163,22 +163,146 @@
             </section>
 
             <!--=============== SKILLS ===============-->
-            <section class="container section section__height" id="skills">
-                <h3 class="subtitleSection">Trato de mejorar</h3>
+            <section class="container section" id="skills">
+                <h3 class="subtitleSection subtitleSkills">Trato de mejorar</h3>
                 <h2 class="section__title titleSkills">Habilidades</h2>
+                <div class="skills__container">
+                    <!--SEPARACIÓN 1 -->
+                    <div class="skills__main">
+                        <img src="./assets/img/sections/skillsImg.svg" class="skills__image" alt="Imagen sección 'Habilidades'">
+                        <div class="skills__info">
+                            <p class="skills__txt skillsTxt1">Durante el paso el tiempo, he podido dominar algunas tecnologías, y esto ha sido posible gracias a la educación online, principalmente la que Platzi ofrece. Dejo por aquí mi perfil por si es de interés.</p>
+                            <div class="skillsButtonContainer">
+                                <a href="https://platzi.com/p/Valenciajcamilo/" class="button skillsButtonPlatzi skillButton" target="_blank" rel="noreferrer noopener" title="Platzi">Ver perfil
+                                </a> 
+                            </div>
+                            <p class="skills__txt skillsTxt2">Dejando esto de lado, soy capaz de diseñar y de crear sitios web dinámicos que sean completamente responsivos y amigables con el usuario, puedo llevar el seguimiento de los proyectos mediante un sistema de control de versiones, y además, estoy capacitado para trabajar colaborativamente con la metodología Scrum.</p>
+                        </div>
+                    </div>
+                    <!--SEPARACIÓN 2 -->
+                    <div class="skills__container__cards">
+                        <!--Habilidades técnicas -->
+                        <div class="skills__content">
+                            <h3 class="skills__title skillsTitleCard1">Habilidades técnicas</h3>
+                            <div class="skills__box">
+                                <!--Izquierda-->
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono HTML5" alt="Icono HTML5" src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                                        <div>
+                                            <h3 class="skills__name">HTML5</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono CSS3" alt="Icono CSS3" src="https://img.icons8.com/color/48/000000/css3.png"/>
+                                        <div>
+                                            <h3 class="skills__name">CSS3</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono JavaScript" alt="Icono JavaScript" src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
+                                        <div>
+                                            <h3 class="skills__name">JavaScript</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Derecha-->
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Git" alt="Icono Git" src="https://img.icons8.com/color/48/000000/git.png"/>
+                                        <div>
+                                            <h3 class="skills__name">Git</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono MySQL" alt="Icono MySQL" src="https://img.icons8.com/color/48/000000/mysql-logo.png"/>
+                                        <div>
+                                            <h3 class="skills__name">MySQL</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Figma" alt="Icono Figma" src="https://img.icons8.com/color/48/000000/figma--v1.png"/>
+                                        <div>
+                                            <h3 class="skills__name">Figma</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Habilidades blandas -->
+                        <div class="skills__content">
+                            <h3 class="skills__title skillsTitleCard2">Habilidades blandas</h3>
+                            <div class="skills__box">
+                                <!--Izquierda-->
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Organizado" alt="Icono Organizado" src="https://img.icons8.com/color/50/000000/tidy-shelf.png"/>
+                                        <div>
+                                            <h3 class="skills__name soft1">Organizado</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Disciplinado" alt="Icono Disciplinado" src="https://img.icons8.com/external-flat-geotatah/50/000000/external-aim-positive-attitude-flat-flat-geotatah.png"/>
+                                        <div>
+                                            <h3 class="skills__name soft2">Disciplinado</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Productivo" alt="Icono Productivo" src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-productivity-digital-nomad-flat-flat-juicy-fish.png"/>
+                                        <div>
+                                            <h3 class="skills__name soft3">Productivo</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Derecha-->
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Asertivo" alt="Icono Asertivo" src="https://img.icons8.com/external-flat-wichaiwi/64/000000/external-confidence-generation-z-flat-wichaiwi.png"/>
+                                        <div>
+                                            <h3 class="skills__name soft4">Asertivo</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Creativo" alt="Icono Creativo" src="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-creative-human-resources-itim2101-flat-itim2101.png"/>
+                                        <div>
+                                            <h3 class="skills__name soft5">Creativo</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <img class="skill__icon" title="Icono Adaptable" alt="Icono Adaptable" src="https://img.icons8.com/external-flat-geotatah/64/000000/external-adaptation-sales-incentive-compensation-flat-flat-geotatah-2.png"/>
+                                        <div>
+                                            <h3 class="skills__name soft6">Adaptable</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SEPARACIÓN 3 -->
+                    <div class="skill__phrase triangle-container">
+                        <img src="./assets/img/sections/skillsBgr.png" class="skill__phrase_bgr triangle" alt="Background phrase img">
+                        <div class="shapes shapes-lg">
+                            <i class='shape pyramid bx bx-pyramid'></i>
+                            <i class='shape extension bx bx-extension' ></i>
+                            <i class='shape plus bx bx-plus'></i>
+                        </div>     
+                        <p class="skill__Message_p1 skillsMsg1">"Roma no se</p>
+                        <p class="skill__Message_p2 skillsMsg2">construyó</p>
+                        <p class="skill__Message_p3 skillsMsg3">en un día"</p>
+                    </div>                    
 
-               
+                </div>
             </section>
 
             <!--=============== PORTFOLIO ===============-->
             <section class="container section section__height" id="portfolio">
-                <h3 class="subtitleSection">Mi trabajo</h3>
+                <h3 class="subtitleSection subtitlePortafolio">Mi trabajo</h3>
                 <h2 class="section__title titlePortafolio">Portafolio</h2>
             </section>
 
             <!--=============== CONTACTME ===============-->
             <section class="container section section__height" id="contactme">
-                <h3 class="subtitleSection">¿Qué sigue?</h3>
+                <h3 class="subtitleSection subtitleContact">¿Qué sigue?</h3>
                 <h2 class="section__title titleContact">Contáctame</h2>
             </section>
         </main>

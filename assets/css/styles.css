@@ -5,19 +5,20 @@
   /*========== Colors ==========*/
   --hue: 174;
   --sat: 63%;
-  --first-color: hsl(var(--hue), var(--sat), 40%); /*Green/Blue*/
+  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --second-color:#b16555; /*Green/Blue*/
   --first-color-alt: rgb(34, 145, 133);
   --title-color: hsl(var(--hue), 12%, 15%); /*Títle h2*/
   --text-color: hsl(var(--hue), 8%, 35%); 
   --body-color: hsl(var(--hue), 100%, 99%); /*Bgr color*/
   --container-color: rgb(255, 255, 255); /*Color Nav*/
   --color-shadow-navDown: hsla(var(--hue), var(--sat), 15%, 0.15); /*Shadow NavDown*/
-  --background-home-img: linear-gradient(20deg, rgb(29, 29, 29) 40%, rgba(38,166,153,1) 86%);
+  --background-home-img: linear-gradient(20deg, rgb(255, 255, 255) 35%, rgba(38,166,153,1) 86%);
 
   /*========== Font and typography ==========*/
   --body-font: 'Montserrat', sans-serif;
   --h1-font-size: 2.5rem;
-  --normal-font-size: 1rem;
+  --normal-font-size: 1.14rem;
   --tiny-font-size: .675rem;
 
   /*========== z index ==========*/
@@ -28,7 +29,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --h1-font-size: 3.5rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 1.14rem;
   }
   .section {
     padding: 7rem 0 2rem;
@@ -50,13 +51,14 @@
 /*========== Variables Dark Theme ==========*/
 body.dark-theme{
   --first-color: hsl(var(--hue), var(--sat), 40%); /*Green/Blue*/
+  --second-color:#b16555; /*Green/Blue*/
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
   --title-color: rgb(255, 255, 255); /*Títle h2*/
   --text-color: #8D8D8D;
   --body-color: rgb(29, 29, 29); /*Bgr color*/
   --container-color: rgb(31, 31, 31); /*Color Nav*/
   --color-shadow-navDown: none; /*Shadow NavDown*/
-  --background-home-img:linear-gradient(20deg, rgb(255, 255, 255) 35%, rgba(38,166,153,1) 86%);
+  --background-home-img:linear-gradient(20deg, rgb(29, 29, 29) 40%, rgba(38,166,153,1) 86%);
 }
 
 
@@ -454,7 +456,7 @@ button {
 
 .home__greeting,
 .home__education{
-  font-size: 1.17rem;
+  font-size: 1.18rem;
   font-weight: 400;
 }
 
@@ -479,7 +481,7 @@ button {
   line-height: 2.2rem;
   margin:1rem;
   color:var(--title-color);
-  text-shadow: 4px 2px 2px var(--first-color);
+  text-shadow: 4px 2px 2px #b16555;
   display: inline-block;
 }
 
@@ -501,6 +503,21 @@ button {
 .home__img {
   width:inherit;
   overflow: hidden;
+}
+
+#head{
+  animation: movingHead 3s ease infinite;
+  transform-origin: center;
+  transform-box: fill-box ;
+}
+
+@keyframes movingHead{
+  from{
+    transform: rotateZ(5deg);
+  }
+  to{
+    transform: rotateZ(10deg);
+  }
 }
 
 /*--------Buttons---------*/
@@ -569,6 +586,7 @@ button {
   font-weight: 500;
   transition: all 0.2s ease-in-out;
   margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
 .button:hover{
@@ -607,6 +625,10 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+/* .button--ghost:hover{
+  background-color:var(--second-color);
+} */
 
 
 /*=============== ABOUT SECTION ===============*/
@@ -666,7 +688,7 @@ button {
   position:relative;
   text-align: justify;
   color:var(--text-color);
-  font-size: 1.17rem;
+  font-size: 1.14rem;
   font-weight: 400;
 }
 
@@ -676,7 +698,6 @@ button {
   position: relative;
   display: inline-block;
   text-align: center;
-  margin-top: 2.5rem;
 }
 /*Phrase backgroung*/
 .about__phrase_bgr{
@@ -707,7 +728,7 @@ button {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
-/*About."lñearning*/
+/*About."learning*/
 .about__Message_p2{
   color:var(--title-color);
   position: absolute;
@@ -743,6 +764,228 @@ button {
   bottom:12%;
   transform: rotate(30deg);
 } 
+
+
+
+/*=============== SKILLS SECTION ===============*/
+/*Skills general container*/
+.skills__container{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+/*Image & Description container*/
+.skills__main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  height: auto;
+}
+/*Image*/
+.skills__image{
+  width:400px;
+  justify-self: center;
+}
+/*Description container*/
+.skills__info{
+  margin:2.5rem 1rem 1rem 1rem;
+}
+/*Description*/
+.skills__txt{
+  position:relative;
+  text-align: justify;
+  color:var(--text-color);
+  font-size: var(--normal-font-size);
+  font-weight: 400;
+}
+/*Button container skills*/
+.skillsButtonContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+}
+/*Button Platzi*/
+.skillsButtonPlatzi{
+  margin-top: 2rem;
+  width:max-content;
+}
+/*.........Skills........*/
+/*Main content skills*/
+.skills__container__cards{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding-top: 1rem;
+  width:auto;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+/*Content*/
+.skills__content{
+  background-color: var(--container-color);
+  padding:1.5rem;
+  border-radius: 1.25rem;
+  -webkit-box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), -32px -3px 39px 30px rgba(38,166,153,0); 
+  box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), -32px -3px 39px 30px rgba(38,166,153,0);
+}
+/*Skill title*/
+.skills__title{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color:var(--first-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+/*Skill divider column*/
+.skills__box{
+  display:flex;
+  justify-content: center;
+  column-gap:3rem;
+}
+/*Space between skill*/
+.skills__group{
+  display: grid;
+  align-content: center;
+  row-gap: 1rem;
+}
+/*Join the SVG and the text*/
+.skills__data{
+  display: flex;
+  column-gap: .5rem;
+  align-items: center;
+}
+/*Icon of the skill*/
+.skill__icon {
+  font-size: 1.7rem;
+  width:30px;
+  color:var(--first-color);
+}
+/*Skill name*/
+.skills__name{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.skillsTxt2{
+  margin-bottom: 1.5rem;
+}
+/*Motivational Phrase*/
+
+/*Phrase container*/
+.skill__phrase{
+  height: auto;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+/*Phrase backgroung*/
+.skill__phrase_bgr{
+  opacity:0.3;
+  background-size: cover;
+  text-align: center;
+  width:auto;
+  height: 100%;
+  justify-self: center;
+  transform: rotate(180deg);
+}
+/*Skill."Roma wasn't"*/
+.skill__Message_p1{
+  color:var(--title-color);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width:fit-content;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 2rem;
+  background: var(--first-color);
+  background: -webkit-linear-gradient(to right, var(--first-color) 0%, var(--title-color) 85%);
+  background: -moz-linear-gradient(to right, var(--first-color) 0%, var(--title-color) 85%);
+  background: linear-gradient(to right, var(--first-color) 0%, var(--title-color) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+/*Skill."build in*/
+.skill__Message_p2{
+  color:var(--title-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:fit-content;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color:var(--title-color);
+}
+/*Skill."one day*/
+.skill__Message_p3{
+  color:var(--title-color);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width:fit-content;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 2rem;
+  background: var(--first-color);
+  background: -webkit-linear-gradient(to left, var(--first-color) 0%, var(--title-color) 85%);
+  background: -moz-linear-gradient(to left, var(--first-color) 0%, var(--title-color) 85%);
+  background: linear-gradient(to left, var(--first-color) 0%, var(--title-color) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+/*Icon Pyramid*/
+.pyramid{
+  left:30%;
+  top:20%;
+  transform: rotate(20deg);
+} 
+/*Icon Extension*/
+.extension{
+  left:80%;
+  bottom:65%;
+  transform: rotate(10deg);
+} 
+/*Icon Plus*/
+.plus{
+  right:60%;
+  bottom:0%;
+  transform: rotate(30deg);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -815,10 +1058,8 @@ button {
   font-size: 1.4rem;
   font-style: normal;
 }
-.about__txt{
-  font-size:1.1rem;
-}
-.about__image{
+
+.about__image,.skills__image{
   width:50%;
 }
 .home__name{
@@ -829,9 +1070,31 @@ button {
   display: flex;
   flex-direction: row;
 }
+.skills__main{
+  display: flex;
+  flex-direction: row-reverse;
+}
 .about__Message_p1,
-.about__Message_p2{
-  font-size: 2.3rem;
+.about__Message_p2,
+.skill__Message_p1,
+.skill__Message_p2,
+.skill__Message_p3{
+  font-size: 2.8rem;
+}
+.skills__container__cards{
+  flex-direction: row;
+  justify-content: center;
+  gap:3rem;
+  margin-top: 20px;
+}
+.skills__title{
+  font-size: 1.4rem;
+}
+.skills__name{
+  font-size: 1.3rem;
+}
+.skill__icon{
+  width: 40px;
 }
 }
 
@@ -854,11 +1117,14 @@ button {
   font-size: 5rem;
   margin:3rem;
 }
-.about__txt{
+.about__txt,.skills__txt{
   font-size:1.3rem;
 }
 .about__Message_p1,
-.about__Message_p2{
+.about__Message_p2,
+.skill__Message_p1,
+.skill__Message_p2,
+.skill__Message_p3{
   font-size: 3.5rem;
 }
 }

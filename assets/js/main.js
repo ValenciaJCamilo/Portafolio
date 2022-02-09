@@ -107,14 +107,24 @@ sr.reveal(`.home__social`,{delay:1800,origin:'bottom'})
 sr.reveal(`.titleAbout`,{origin:'bottom'})
 sr.reveal(`.about__image`,{origin:'left'})
 sr.reveal(`.aboutTxt`,{origin:'right'})
-sr.reveal(`.aboutMsg1`,{origin:'right',distance:"200px",reset:true})
-sr.reveal(`.aboutMsg2`,{origin:'left',distance:"200px",reset:true})
+sr.reveal(`.aboutMsg1`,{origin:'right',distance:"200px",reset:true, delay:200})
+sr.reveal(`.aboutMsg2`,{origin:'left',distance:"200px",reset:true,delay:400})
 sr.reveal(`.palette`,{distance:"100px",origin:'left',reset:true})
 sr.reveal(`.hive`,{distance:"90px",origin:'bottom',reset:true})
 sr.reveal(`.happy`,{distance:"200px",origin:'top',reset:true})
-
-
-
+/*Skills*/
+sr.reveal(`.titleSkills`,{origin:'bottom'})
+sr.reveal(`.skills__image`,{origin:'top',delay:100,distance:"150px"})
+sr.reveal(`.skillsTxt1`,{origin:'left'})
+sr.reveal(`.skillsButtonContainer`)
+sr.reveal(`.skillsTxt2`,{origin:'right'})
+sr.reveal(`.skills__content`,{origin:'bottom',delay:200})
+sr.reveal(`.skillsMsg1`,{origin:'right',distance:"200px",reset:true, delay:50})
+sr.reveal(`.skillsMsg2`,{origin:'left',distance:"200px",reset:true,delay:50})
+sr.reveal(`.skillsMsg3`,{origin:'right',distance:"200px",reset:true, delay:50})
+sr.reveal(`.pyramid`,{distance:"100px",origin:'left',reset:true})
+sr.reveal(`.extension`,{distance:"300px",origin:'bottom',reset:true})
+sr.reveal(`.plus`,{distance:"200px",origin:'top',reset:true})
 /*=============== LOADING ANIMATION ===============*/
 /*If we don't put this function, the navbar isn't gonna work, will be blocked*/
 function loader(){
@@ -129,13 +139,14 @@ window.onload = fadeOut();
 
 
 /*=============== GSAP & SCROLLTRIGGER ===============*/
-let bgImage = document.querySelector(".about__phrase_bgr");
+let bgImageAbout = document.querySelector(".about__phrase_bgr");
+let bgImageSkill = document.querySelector(".skill__phrase_bgr");
 //  Now registering thescrollTrigger plugin to gsap
 gsap.registerPlugin(ScrollTrigger);
 // Now we are going to animate
-
+// TRIANGLE - ABOUT ANIMATION
 gsap.fromTo(
-  bgImage,
+  bgImageAbout,
   {
     clipPath: "circle(3% at 77% 40%)",
   },
@@ -144,12 +155,28 @@ gsap.fromTo(
     ease: "none",
     //  We want to do that animation on scroll
     scrollTrigger: {
-      trigger: bgImage,
+      trigger: bgImageAbout,
       scrub: 1,
-      start: "top bottom",
+      start: "top center",
       end: "bottom center-=-100",
-      scale:0.5,
-      duration:4,
+    },
+  }
+);
+// HEXAGON - SKILL ANIMATION
+gsap.fromTo(
+  bgImageSkill,
+  {
+    clipPath: "circle(3% at 77% 40%)",
+  },
+  {
+    clipPath: "circle(75% at 50% 50%)",
+    ease: "none",
+    //  We want to do that animation on scroll
+    scrollTrigger: {
+      trigger: bgImageSkill,
+      scrub: 3,
+      start: "top center",
+      end: "center center-=-100",
     },
   }
 );
