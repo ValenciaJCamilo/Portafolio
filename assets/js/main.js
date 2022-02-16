@@ -106,25 +106,35 @@ sr.reveal(`.home__social`,{delay:1800,origin:'bottom'})
 /*About*/
 sr.reveal(`.titleAbout`,{origin:'bottom'})
 sr.reveal(`.about__image`,{origin:'left'})
-sr.reveal(`.aboutTxt`,{origin:'right'})
-sr.reveal(`.aboutMsg1`,{origin:'right',distance:"200px",reset:true, delay:200})
-sr.reveal(`.aboutMsg2`,{origin:'left',distance:"200px",reset:true,delay:400})
+sr.reveal(`.about__info`,{origin:'right'})
+sr.reveal(`.aboutMsg1`,{origin:'right',distance:"200px",delay:200})
+sr.reveal(`.aboutMsg2`,{origin:'left',distance:"200px",delay:400})
 sr.reveal(`.palette`,{distance:"100px",origin:'left',reset:true})
 sr.reveal(`.hive`,{distance:"90px",origin:'bottom',reset:true})
 sr.reveal(`.happy`,{distance:"200px",origin:'top',reset:true})
 /*Skills*/
 sr.reveal(`.titleSkills`,{origin:'bottom'})
 sr.reveal(`.skills__image`,{origin:'top',delay:100,distance:"150px"})
-sr.reveal(`.skillsTxt1`,{origin:'left'})
+sr.reveal(`.skills__info`,{origin:'left'})
 sr.reveal(`.skillsButtonContainer`)
-sr.reveal(`.skillsTxt2`,{origin:'right'})
 sr.reveal(`.skills__content`,{origin:'bottom',delay:200})
-sr.reveal(`.skillsMsg1`,{origin:'right',distance:"200px",reset:true, delay:50})
-sr.reveal(`.skillsMsg2`,{origin:'left',distance:"200px",reset:true,delay:50})
-sr.reveal(`.skillsMsg3`,{origin:'right',distance:"200px",reset:true, delay:50})
+sr.reveal(`.skillsMsg1`,{origin:'right',distance:"200px",delay:50})
+sr.reveal(`.skillsMsg2`,{origin:'left',distance:"200px",delay:50})
+sr.reveal(`.skillsMsg3`,{origin:'right',distance:"200px",delay:50})
 sr.reveal(`.pyramid`,{distance:"100px",origin:'left',reset:true})
 sr.reveal(`.extension`,{distance:"300px",origin:'bottom',reset:true})
 sr.reveal(`.plus`,{distance:"200px",origin:'top',reset:true})
+/*Work*/
+sr.reveal(`.titlePortafolio`,{origin:'bottom'})
+sr.reveal(`.work__filters`,{origin:'top'})
+sr.reveal(`.work__card`,{origin:'bottom'})
+sr.reveal(`.xd`)
+sr.reveal(`.group`,{distance:"100px",origin:'left',reset:true})
+sr.reveal(`.target`,{distance:"90px",origin:'bottom',reset:true})
+sr.reveal(`.chevrons`,{distance:"50px",origin:'top',reset:true})
+
+
+
 /*=============== LOADING ANIMATION ===============*/
 /*If we don't put this function, the navbar isn't gonna work, will be blocked*/
 function loader(){
@@ -132,7 +142,7 @@ function loader(){
 }
 
 function fadeOut(){
-setInterval(loader, 1000);
+setInterval(loader, 0);
 }
 
 window.onload = fadeOut();
@@ -176,8 +186,27 @@ gsap.fromTo(
       trigger: bgImageSkill,
       scrub: 3,
       start: "top center",
-      end: "center center-=-100",
+      end: "bottom center-=-100",
     },
   }
 );
 
+/*=============== MIXITUP ===============*/
+let mixerPortfolio = mixitup('.work__container', {
+  selectors: {
+      target: '.work__card'
+  },
+  animation: {
+      duration: 0
+
+  }
+});
+
+/*Link active work*/
+const linkWork = document.querySelectorAll('.work__item')
+
+function activeWork(){
+  linkWork.forEach(l=>l.classList.remove('active-work'))
+  this.classList.add('active-work')
+}
+linkWork.forEach(l=>l.addEventListener('click',activeWork))

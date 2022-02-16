@@ -44,6 +44,7 @@
 }
 
 
+
 .change-theme:hover{
   color:var(--first-color);
 }
@@ -107,18 +108,18 @@ button {
   position: fixed;
   top:0; left:0;
   z-index: 10000;
-  background:#fff;
+  background:var(--first-color);
   display: flex;
   align-items: center;
   justify-content: center;
   height:100%;
   width:100%;
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all .5s ease-in-out;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 1s;
+	animation-duration: .5s;
 }
 @keyframes fadeInOpacity {
 	0% {
@@ -682,6 +683,7 @@ button {
 /*Description container*/
 .about__info{
   margin:2.5rem 1rem 1rem 1rem;
+  text-align: justify;
 }
 /*Description*/
 .about__txt{
@@ -690,6 +692,10 @@ button {
   color:var(--text-color);
   font-size: 1.14rem;
   font-weight: 400;
+}
+.about__special__txt{
+  color:var(--first-color);
+  font-weight: 600;
 }
 
 /*Phrase container*/
@@ -716,6 +722,7 @@ button {
   top: 40%;
   left: 35%;
   width:fit-content;
+  width: -moz-fit-content;
   transform: translate(-40%, -40%);
   font-weight: 700;
   font-size: 2rem;
@@ -735,6 +742,7 @@ button {
   top: 50%;
   left: 50%;
   width:fit-content;
+  width: -moz-fit-content;
   transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 2rem;
@@ -791,6 +799,7 @@ button {
 /*Description container*/
 .skills__info{
   margin:2.5rem 1rem 1rem 1rem;
+  text-align: justify;
 }
 /*Description*/
 .skills__txt{
@@ -799,6 +808,10 @@ button {
   color:var(--text-color);
   font-size: var(--normal-font-size);
   font-weight: 400;
+}
+.skills__special__txt{
+  color:var(--first-color);
+  font-weight: 500;
 }
 /*Button container skills*/
 .skillsButtonContainer
@@ -811,6 +824,7 @@ button {
 /*Button Platzi*/
 .skillsButtonPlatzi{
   margin-top: 2rem;
+  margin-bottom: 2rem;
   width:max-content;
 }
 /*.........Skills........*/
@@ -876,14 +890,14 @@ button {
 /*Motivational Phrase*/
 
 /*Phrase container*/
-.skill__phrase{
+.skill__phrase,.work__phrase{
   height: auto;
   position: relative;
   display: inline-block;
   text-align: center;
 }
 /*Phrase backgroung*/
-.skill__phrase_bgr{
+.skill__phrase_bgr,.work__phrase_bgr{
   opacity:0.3;
   background-size: cover;
   text-align: center;
@@ -893,12 +907,13 @@ button {
   transform: rotate(180deg);
 }
 /*Skill."Roma wasn't"*/
-.skill__Message_p1{
+.skill__Message_p1,.work__Message_p1{
   color:var(--title-color);
   position: absolute;
   top: 40%;
   left: 50%;
   width:fit-content;
+  width: -moz-fit-content;
   transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 2rem;
@@ -912,12 +927,13 @@ button {
   text-transform: uppercase;
 }
 /*Skill."build in*/
-.skill__Message_p2{
+.skill__Message_p2,.work__Message_p2{
   color:var(--title-color);
   position: absolute;
   top: 50%;
   left: 50%;
   width:fit-content;
+  width: -moz-fit-content;
   transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 2rem;
@@ -925,12 +941,13 @@ button {
   color:var(--title-color);
 }
 /*Skill."one day*/
-.skill__Message_p3{
+.skill__Message_p3,.work__Message_p3{
   color:var(--title-color);
   position: absolute;
   top: 60%;
   left: 50%;
   width:fit-content;
+  width: -moz-fit-content;
   transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 2rem;
@@ -942,6 +959,10 @@ button {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+}
+.prueba{
+  text-align: center;
+  background-color: #b16555;
 }
 /*Icon Pyramid*/
 .pyramid{
@@ -964,29 +985,172 @@ button {
 
 
 
+/*=============== PORTFOLIO/WORK SECTION ===============*/
+/*Container: Full portfolio*/
+.portfolio__container{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+/*Mini navbar for filters*/
+.work__filters{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  height: auto;
+}
+/*Container: Full card works*/
+.work__container{
+  padding-top: 1rem;
+  height: auto;
+}
+/*Item Navbar filter*/
+.work__item{
+  cursor: pointer;
+  color:var(--title-color);
+  padding:.25rem .75rem;
+  font-weight: 500;
+  border-radius: .5rem;
+}
+/*Each card.*/
+.work__card{
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), -32px -3px 39px 30px rgba(38,166,153,0); 
+  box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), -32px -3px 39px 30px rgba(38,166,153,0);
+  height: auto;
+  position:relative;
+  overflow: hidden;
+}
+/*Mask for hover*/
+.work__card .mask{
+  background: rgba(0,0,0,.9);
+  position:absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+/*Mask hover*/
+.work__card:hover .mask{
+  opacity: 0.97;
+}
+/*Work tag*/
+.work__tag{
+  color:white;
+  background:var(--first-color);
+  position:absolute;
+  top:0;
+  left:0;
+  border-bottom-right-radius: 0.98rem;
+  font-size: 0.92rem;
+  display: inline-block;
+  padding:1rem 0.625rem;
+  text-align: center;
+  transition:0.3s;
+  transform: translateY(-40px);
+  opacity: 0;
+}
+/*Work buttons*/
+.work__button1,.work__button2{
+  color:white;
+  position:absolute;
+  top:.5rem;
+  display: block;
+  height:auto;
+  width:auto;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.7rem;
+  display:flex;
+  justify-content: center;
+  padding: .3rem;
+  transition: 0.3s;
+  transform: translateX(40px);
+  opacity: 0;
+}
+/*Work buttons align*/
+.work__button1{
+  right:.3rem;
+}
+.work__button2{
+  right:3rem;
+}
+/*Work buttons hover*/
+.work__button1:hover,.work__button2:hover{
+  color:white;
+  background-color: var(--first-color);
+}
+/*Work description*/
+.portfolio-item-description{
+  color:white;
+  font-size: 1rem;
+  margin:0 .98rem 0 .98rem;
+  padding:0.125rem;
+  position:absolute;
+  width:auto;
+  top:3.75rem;
+  text-align: center;
+  left:0;
+  transition: 0.3s;
+  transform: translateY(30px);
+  opacity: 0;
+}
+/*Opacity final effect*/
+.work__card:hover p,.work__card:hover span, .work__card:hover a{
+  opacity: 1;
+  transform: translateY(0);
+}
+.work__card:active p,.work__card:active span, .work__card:active a{
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/*Card image.*/
+.work__img{
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: .50rem;
+  border-bottom: 1px solid var(--color-shadow-navDown);
+  width: 100%;
+  object-fit:cover;
+}
+/*Work title*/
+.work__title{
+  font-size:var(--normal-font-size);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color:var(--title-color);
+}
+/*Active item work*/
+.active-work{
+  background-color: var(--first-color);
+  color:var(--body-color);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Icon Group*/
+.group{
+  left:20%;
+  top:30%;
+  transform: rotate(-10deg);
+} 
+/*Icon Chevrons*/
+.chevrons{
+  left:80%;
+  bottom:30%;
+  transform: rotate(10deg);
+} 
+/*Icon Target*/
+.target{
+  right:60%;
+  bottom:7%;
+  transform: rotate(50deg);
+} 
 
 
 
@@ -1000,6 +1164,16 @@ button {
   .nav__name {
     display: none;
   }
+  /*Work description*/
+  .portfolio-item-description{
+    font-size: .900rem;
+}
+  .skills__name{
+    font-size: .900rem;
+  }
+  .work__item{
+    font-size: 1rem;
+  }
 }
 
 
@@ -1009,8 +1183,19 @@ button {
     justify-content: center;
     column-gap: 3rem;
   }
+  .work__container{
+    justify-content: center;
+  }
+  .work__img{
+    width: 400px;
+  }
+    /*Work description*/
+    .portfolio-item-description{
+      font-size: 1rem;
+      margin-top: 35px;
+  }
 }
-
+  
 @media screen and (max-width: 576px) {
  .overlay{
    display: none;
@@ -1078,7 +1263,10 @@ button {
 .about__Message_p2,
 .skill__Message_p1,
 .skill__Message_p2,
-.skill__Message_p3{
+.skill__Message_p3,
+.work__Message_p1,
+.work__Message_p2,
+.work__Message_p3{
   font-size: 2.8rem;
 }
 .skills__container__cards{
@@ -1091,11 +1279,22 @@ button {
   font-size: 1.4rem;
 }
 .skills__name{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .skill__icon{
   width: 40px;
 }
+.work__container{
+  grid-template-columns: repeat(2,max-content);
+}
+.work__img{
+  width:330px;
+}
+/*Work description*/
+.portfolio-item-description{
+font-size: 1rem;
+margin-top: 10px;
+  }
 }
 
 /* For large devices */
@@ -1124,7 +1323,21 @@ button {
 .about__Message_p2,
 .skill__Message_p1,
 .skill__Message_p2,
-.skill__Message_p3{
+.skill__Message_p3,
+.work__Message_p1,
+.work__Message_p2,
+.work__Message_p3{
   font-size: 3.5rem;
 }
+.work__container{
+gap:2.5rem
+}
+.work__img{
+  width:450px;
+}
+/*Work description*/
+.portfolio-item-description{
+  font-size: var(--normal-font-size);
+  margin-top: 40px;
+    }
 }
