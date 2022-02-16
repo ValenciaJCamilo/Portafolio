@@ -220,6 +220,10 @@ button {
   font-size: 1.4rem;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 
 
@@ -338,6 +342,10 @@ button {
     align-self: center;
     transition: .4s;
     width:120px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
 }
 
 .themeWrap
@@ -734,6 +742,10 @@ button {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 /*About."learning*/
 .about__Message_p2{
@@ -754,6 +766,10 @@ button {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 /*Icon Smile*/
 .hive{
@@ -925,6 +941,10 @@ button {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 /*Skill."build in*/
 .skill__Message_p2,.work__Message_p2{
@@ -939,6 +959,10 @@ button {
   font-size: 2rem;
   text-transform: uppercase;
   color:var(--title-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 /*Skill."one day*/
 .skill__Message_p3,.work__Message_p3{
@@ -959,6 +983,10 @@ button {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 .prueba{
   text-align: center;
@@ -1100,6 +1128,10 @@ button {
   transition: 0.3s;
   transform: translateY(30px);
   opacity: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select:none;
 }
 /*Opacity final effect*/
 .work__card:hover p,.work__card:hover span, .work__card:hover a{
