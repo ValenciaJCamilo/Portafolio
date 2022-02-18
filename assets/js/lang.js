@@ -74,6 +74,14 @@ const worksMsg3El = document.querySelector('.worksMsg3');
 /*CONTACT*/
 const titleContactEl = document.querySelector('.titleContact');
 const subtitleContactEl = document.querySelector('.subtitleContact');
+const contactTextEl = document.querySelector('.contactText');
+const waycontactTitleEl = document.querySelector('.waycontactTitle');
+const formcontactTitleEl = document.querySelector('.formcontactTitle');
+const waycontactEmailEl = document.querySelector('.waycontactEmail');
+const formNameEl = document.querySelector('.formName');
+const formMailEl = document.querySelector('.formMail');
+const formMssgEl = document.querySelector('.formMssg');
+const formSubmitEl = document.querySelector('.formSubmit');
 
 
 link.forEach(el => {
@@ -157,7 +165,14 @@ link.forEach(el => {
         /*CONTACT*/
         titleContactEl.textContent = data[attr].titleContact;
         subtitleContactEl.textContent = data[attr].subtitleContact;
-
+        contactTextEl.textContent = data[attr].contactText;
+        waycontactTitleEl.textContent = data[attr].waycontactTitle;
+        formcontactTitleEl.textContent = data[attr].formcontactTitle;
+        waycontactEmailEl.textContent = data[attr].waycontactEmail;
+        formNameEl.textContent = data[attr].formName;
+        formMailEl.textContent = data[attr].formMail;
+        formMssgEl.textContent = data[attr].formMssg;
+        formSubmitEl.textContent = data[attr].formSubmit;
     });
 });
 
@@ -237,7 +252,14 @@ var data = {
         /*CONTACT*/
         "titleContact":"Contacto",
         "subtitleContact":"¿Qué sigue?",
-
+        "contactText":"Si tienes algún proyecto en mente que quieras llevar a la realidad, no dudes en hacérmelo saber, estaré encantado de trabajar junto a ti.",
+        "waycontactTitle":"Habla conmigo",
+        "formcontactTitle":"Hazme saber tu idea",
+        "waycontactEmail":"Correo",
+        "formName":"Nombre completo",
+        "formMail":"Correo electrónico",
+        "formMssg":"Mensaje",
+        "formSubmit":"Enviar idea",
     },
     "english":{
         /*NAV BAR*/
@@ -314,6 +336,13 @@ var data = {
         /*CONTACT*/
         "titleContact":"Contact",
         "subtitleContact":"What's next?",
-
+        "contactText":"If you have a project in mind that you want to bring to reality, don't hesitate to let me know, I will be happy to work with you.",
+        "waycontactTitle":"Talk to me",
+        "formcontactTitle":"Let me know your idea",
+        "waycontactEmail":"Email",
+        "formName":"Full name",
+        "formMail":"E-mail",
+        "formMssg":"Message",
+        "formSubmit":"Send idea",
     }
 }

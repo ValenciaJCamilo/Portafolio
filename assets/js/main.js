@@ -197,7 +197,6 @@ let mixerPortfolio = mixitup('.work__container', {
   },
   animation: {
       duration: 0
-
   }
 });
 
