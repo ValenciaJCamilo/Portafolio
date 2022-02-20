@@ -246,7 +246,7 @@ validate();
 
 
 function sendMail(name,email,msg){
-  emailjs.send("service_kqglwjj","template_5t7weyj",{
+  emailjs.send("service_bvryk39","template_zdlf7cq",{
     from_name: name,
     to_name: email,
     message: msg,
@@ -270,8 +270,8 @@ function inputEmpty(){
 }
 function mailError(){
   swal({
-    title:"Hmmm...",
-    text:"Revisa el correo electrónico.",
+    title:"Hmm...",
+    text:"El correo electrónico no es válido.",
     icon:"warning",
     button:"Ok"
   });
