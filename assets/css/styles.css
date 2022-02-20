@@ -597,6 +597,7 @@ button {
   transition: all 0.2s ease-in-out;
   margin-bottom: 1.5rem;
   font-size: 1rem;
+  font-family: var(--body-font);
 }
 
 .button:hover{
