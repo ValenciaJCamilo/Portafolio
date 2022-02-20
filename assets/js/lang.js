@@ -82,6 +82,9 @@ const formNameEl = document.querySelector('.formName');
 const formMailEl = document.querySelector('.formMail');
 const formMssgEl = document.querySelector('.formMssg');
 const formSubmitEl = document.querySelector('.formSubmit');
+/*FOOTER*/
+const footerMsgEl = document.querySelector('.footerMsg');
+const footerrightsEl = document.querySelector('.footerrights');
 
 
 link.forEach(el => {
@@ -173,6 +176,9 @@ link.forEach(el => {
         formMailEl.textContent = data[attr].formMail;
         formMssgEl.textContent = data[attr].formMssg;
         formSubmitEl.textContent = data[attr].formSubmit;
+        /*FOOTER*/
+        footerMsgEl.textContent = data[attr].footerMsg;
+        footerrightsEl.textContent = data[attr].footerrights;
     });
 });
 
@@ -260,6 +266,9 @@ var data = {
         "formMail":"Correo electrónico",
         "formMssg":"Mensaje",
         "formSubmit":"Enviar idea",
+        /*FOOTER*/
+        "footerMsg":"Sígueme en mis redes sociales ツ",
+        "footerrights":"Todos los derechos reservados - 2022",
     },
     "english":{
         /*NAV BAR*/
@@ -344,5 +353,8 @@ var data = {
         "formMail":"E-mail",
         "formMssg":"Message",
         "formSubmit":"Send idea",
+        /*FOOTER*/
+        "footerMsg":"Follow me on my social media ツ",
+        "footerrights":"All rights reserved - 2022",
     }
 }

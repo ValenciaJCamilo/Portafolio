@@ -6,8 +6,10 @@
         <link rel="shortcut icon" href="./assets/img/icon.png">
         <!--=============== SEO TAGS ===============-->
         <meta name="description" content="Hey, bienvenido a mi sitio web personal, soy Camilo, estudiante de Ingeniería de Sistemas, apasionado por el Desarrollo Web, y enfocado en Frontend.">
-        <meta name="keywords" content="Web Developer, Web Development, Camilo Valencia, Portafolio, Curriculum Vitae, CSS, HTML, CSS, JavaScript, Frontend Developer, Frontend Development, UI, UX, Experiencia de usuario, Desarrollador Web, Sitio web personal, Hoja de vida, Programador, Diseñador, HTML semántico">
+        <meta name="keywords" content="Web Developer, Web Development, Camilo Valencia, Portafolio, Curriculum Vitae, CSS, HTML5, CSS3, JavaScript, Frontend Developer, Frontend Development, UI, UX, Experiencia de usuario, Desarrollador Web, Sitio web personal, Hoja de vida, Programador, Diseñador, HTML semántico, Designer, Programmer, User Interface, User Experience, Portfolio, Web, Web design">
         <meta name="author" content="Camilo Valencia">
+        <meta name="copyright" content="Camilo Valencia"/>
+        <meta name="robots" content="follow"/>
 
         <!--=============== GOOGLE FONTS ===============-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +22,8 @@
  
         <title>Camilo Valencia | Portafolio</title>
         <!--=====================FORM===================-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
         (function() {
         emailjs.init("user_awtjkdvj0UCzja6VBux7Y");
         })();
@@ -135,6 +137,10 @@
                                 <a href="https://twitter.com/Valenciajcamilo" target="_blank" rel="noreferrer noopener"
                                 title="Twitter" class="home__social-link twitter">
                                     <i class="bx bxl-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/valenciajcamilo/" target="_blank" rel="noreferrer noopener"
+                                title="Instagram" class="home__social-link instagram">
+                                    <i class="bx bxl-instagram"></i>
                                 </a>
                             </div>  
                         </div>
@@ -453,17 +459,17 @@
                         <form method="post" class="contact__form">
                             <!--Name-->
                             <div class="contact__form-div">
-                                <input id="name" type="text" autocomplete required name="fullname" placeholder=" " class="contact__form-input username">
+                                <input id="fullname" type="text" autocomplete required name="fullname" placeholder=" " class="contact__form-input username">
                                 <label for="fullname" class="contact__form-tag formName">Nombre completo</label>
                             </div>
                             <!--Email-->
                             <div class="contact__form-div">
-                                <input id="mail" type="email" autocomplete required name="email" placeholder=" " class="contact__form-input emailuser">
+                                <input id="email" type="email" autocomplete required name="email" placeholder=" " class="contact__form-input emailuser">
                                 <label for="email" class="contact__form-tag formMail">Correo electrónico</label>
                             </div>
                             <!--Content message-->
                             <div class="contact__form-div contat__form-area">
-                                <textarea id="msg" name="descriptionIdea" autocomplete required placeholder=" " class="contact__form-input messageuser" name="" id="" cols="30" rows="10"></textarea>
+                                <textarea id="descriptionIdea" name="descriptionIdea" autocomplete required placeholder=" " class="contact__form-input messageuser" cols="30" rows="10"></textarea>
                                 <label for="descriptionIdea" class="contact__form-tag formMssg">Mensaje</label>
                             </div>
                             <button onclick='sendMail()' class="button formSubmit submit">Enviar Idea</button>
@@ -473,14 +479,44 @@
             </section>
         </main>
         <!--=============== FOOTER ===============-->
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="footer__container container">
-                <h2 class="footer__title">Camilo :)</h2>
-                <ul class="footer__list">
-
+                <h2 class="footer__title">Camilo Valencia</h2>
+                <!--Text-->
+                <p class="footer_msg footerMsg">Sígueme en mis redes sociales ツ</p>
+                <!--Social Media-->
+                <ul class="footer__social">
+                    <li>
+                        <a href="https://www.linkedin.com/in/ValenciaJCamilo/" target="_blank" class="footer__social-link fsl1" rel="noreferrer noopener" title="LinkedIn">
+                            <i class='bx bxl-linkedin-square'></i>
+                        </a>   
+                    </li>
+                    <li>
+                        <a href="https://github.com/ValenciaJCamilo" target="_blank" rel="noreferrer noopener" title="GitHub" class="footer__social-link fsl2">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Valenciajcamilo" target="_blank" rel="noreferrer noopener"
+                        title="Twitter" class="footer__social-link fsl3">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/valenciajcamilo/" target="_blank" rel="noreferrer noopener"
+                        title="Instagram" class="footer__social-link fsl4">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
                 </ul>
+                <span class="footer__rights">
+                    &#169; Valenciajcamilo
+                </span>
+                <span class="footer__rights footerrights">
+                    Todos los derechos reservados - 2022
+                </span>
             </div>
-        </footer> -->
+        </footer>
         <!--=============== JS ===============-->
         <!--=============== GSAP ===============-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

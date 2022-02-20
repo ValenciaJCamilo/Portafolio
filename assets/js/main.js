@@ -255,7 +255,7 @@ function sendMail(name,email,msg){
 function success(){
   swal({
     title:"Mensaje enviado!",
-    text:"Muy pronto recibirás una respuesta",
+    text:"Muy pronto recibirás una respuesta.",
     icon:"success",
     button:"Ok"
   });
@@ -263,7 +263,7 @@ function success(){
 function inputEmpty(){
   swal({
     title:"Oops!",
-    text:"Debes completar todos los campos",
+    text:"Debes completar todos los campos.",
     icon:"error",
     button:"Ok"
   });
@@ -271,7 +271,7 @@ function inputEmpty(){
 function mailError(){
   swal({
     title:"Hmmm...",
-    text:"Revisa el correo electrónico",
+    text:"Revisa el correo electrónico.",
     icon:"warning",
     button:"Ok"
   });

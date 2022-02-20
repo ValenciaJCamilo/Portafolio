@@ -515,21 +515,6 @@ button {
   overflow: hidden;
 }
 
-#head{
-  animation: movingHead 3s ease infinite;
-  transform-origin: center;
-  transform-box: fill-box ;
-}
-
-@keyframes movingHead{
-  from{
-    transform: rotateZ(5deg);
-  }
-  to{
-    transform: rotateZ(10deg);
-  }
-}
-
 /*--------Buttons---------*/
 .home__buttons{
   display: flex;
@@ -557,7 +542,7 @@ button {
   width:max-content;
   background-color:var(--container-color);
   color:var(--first-color);
-  padding: 0.4rem;
+  padding: 0.3rem;
   border-radius: 50%;
   display:flex;
   font-size:2rem;
@@ -568,7 +553,7 @@ button {
 .home__social-link:hover{
   background-color:var(--first-color);
   color:#fff;
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .home__social-link.linkedin:hover
@@ -584,6 +569,10 @@ button {
 .home__social-link.twitter:hover
 {
   background-color:#1C99E6;
+}
+.home__social-link.instagram:hover
+{
+  background-color:#C13584;
 }
 
 /*--------Buttons---------*/
@@ -1197,7 +1186,7 @@ button {
 /*General*/
 .contact__container{
   row-gap: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 .contact__title{
   text-align: center;
@@ -1256,22 +1245,6 @@ button {
   font-size: 2rem;
   transition: .4s;
 }
-/*Form*/
-/* .contact__form-div{
-  position:relative;
-  margin-bottom: 2rem;
-  height: 4rem;
-}
-.contact__form-input{
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  border:2px solid red;
-  background: none;
-}
- */
 /*Form*/
 .contact__form-div
 {
@@ -1359,10 +1332,63 @@ button {
   color: var(--first-color);
 }
 
+/*=============== FOOTER SECTION ===============*/
+.footer{
+  background-color: var(--container-color);
+  box-shadow:0 -1px 12px var(--color-shadow-navDown);
+}
+.footer__container{
+  padding:2rem 0 6rem;
+}
+.footer__title,
+.footer__link{
+  color:var(--title-color);
+}
+.footer__title{
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.footer_msg{
+  text-align: center;
+  margin-bottom: 1.6rem;
+  color:var(--title-color);
+}
+.footer__social{
+  display:flex;
+  justify-content: center;
+}
+.footer__social-link{
+  color:var(--title-color);
+  padding:.9rem;
+  font-size: 1.7rem;
+  display: inline-flex;
+  margin-bottom: 2rem;
+  transition:.3s;
+}
+/*Linkedin*/
+.fsl1:hover{
+  color:#2766B2;
+}
+/*GitHub*/
+.fsl2:hover{
+  color:rgb(71, 71, 71);
+}
+/*Twitter*/
+.fsl3:hover{
+  color:#1C99E6;
+}
+/*Instagram*/
+.fsl4:hover{
+  color:#C13584;
+}
+.footer__rights{
+  display:block;
+  text-align: center;
+  font-size: smaller;
+  color:var(--title-color);
+}
 
-
-
-/*=============== MEDIA QUERIES ===============*/
+  /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
 /* Remove if you choose, the minimalist design */
 @media screen and (max-width: 340px) {
@@ -1513,10 +1539,15 @@ margin-top: 10px;
   grid-template-columns: repeat(2,max-content);
   justify-content: center;
   column-gap: 4rem;
+  padding-bottom: 4rem;
 }
 /*Contact text*/
 .contact__text{
   font-size: var(--normal-font-size);
+}
+/*FOOTER*/
+.footer__container{
+  padding:2rem;
 }
 }
 
