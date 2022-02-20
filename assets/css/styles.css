@@ -704,7 +704,7 @@ button {
 }
 .about__special__txt{
   color:var(--first-color);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /*Phrase container*/
@@ -1342,11 +1342,21 @@ button {
   margin-top:3rem;
   margin-bottom:2.5rem;
 }
-
-
-
-
-
+/*Customize sweet alert*/
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: var(--first-color);
+  font-size: 12px;
+  border: 1px solid var(--first-color-alt);
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-text {
+  color: black;
+}
+.swal-title {
+  color: var(--first-color);
+}
 
 
 

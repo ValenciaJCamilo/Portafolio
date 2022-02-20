@@ -19,6 +19,13 @@
         <link rel="stylesheet" href="assets/css/styles.css">
  
         <title>Camilo Valencia | Portafolio</title>
+        <!--=====================FORM===================-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function() {
+        emailjs.init("user_awtjkdvj0UCzja6VBux7Y");
+        })();
+        </script>
     </head>
     <body>
 
@@ -412,7 +419,7 @@
                         <h3 class="contact__title waycontactTitle">Habla conmigo</h3>
                         <div class="contact__info">
                             <!--Email-->
-                            <div class="contact__card">
+                            <div class="contact__card contact__card1">
                                 <i class='bx bx-mail-send contact__card-icon'></i>
                                 <h3 class="contact__card-title waycontactEmail">Correo</h3>
                                 <span class="contact__card-data">camilovalncias@gmail.com</span>
@@ -421,7 +428,7 @@
                                 </a>
                             </div>
                             <!--WhatsApp-->
-                            <div class="contact__card">
+                            <div class="contact__card contact__card2">
                                 <i class='bx bxl-whatsapp contact__card-icon' ></i>
                                 <h3 class="contact__card-title">WhatsApp</h3>
                                 <span class="contact__card-data">+57 3012214453</span>
@@ -430,7 +437,7 @@
                                 </a>
                             </div>
                             <!--Messenger-->
-                            <div class="contact__card">
+                            <div class="contact__card contact__card3">
                                 <i class='bx bxl-messenger contact__card-icon' ></i>
                                 <h3 class="contact__card-title">Messenger</h3>
                                 <span class="contact__card-data">valenciajcamilo</span>
@@ -443,23 +450,23 @@
                     <!--Container 2-->
                     <div class="contact__content">
                         <h3 class="contact__title formcontactTitle">Hazme saber tu idea</h3>
-                        <form action="" class="contact__form">
+                        <form method="post" class="contact__form">
                             <!--Name-->
                             <div class="contact__form-div">
-                                <input type="text" autocomplete required name="fullname" placeholder=" " class="contact__form-input">
-                                <label for="" class="contact__form-tag formName">Nombre completo</label>
+                                <input id="name" type="text" autocomplete required name="fullname" placeholder=" " class="contact__form-input username">
+                                <label for="fullname" class="contact__form-tag formName">Nombre completo</label>
                             </div>
                             <!--Email-->
                             <div class="contact__form-div">
-                                <input type="email" autocomplete required name="email" placeholder=" " class="contact__form-input">
-                                <label for="" class="contact__form-tag formMail">Correo electrónico</label>
+                                <input id="mail" type="email" autocomplete required name="email" placeholder=" " class="contact__form-input emailuser">
+                                <label for="email" class="contact__form-tag formMail">Correo electrónico</label>
                             </div>
                             <!--Content message-->
                             <div class="contact__form-div contat__form-area">
-                                <textarea name="descriptionIdea" autocomplete required placeholder=" " class="contact__form-input" name="" id="" cols="30" rows="10"></textarea>
-                                <label for="" class="contact__form-tag formMssg">Mensaje</label>
+                                <textarea id="msg" name="descriptionIdea" autocomplete required placeholder=" " class="contact__form-input messageuser" name="" id="" cols="30" rows="10"></textarea>
+                                <label for="descriptionIdea" class="contact__form-tag formMssg">Mensaje</label>
                             </div>
-                            <submit class="button formSubmit">Enviar Idea</submit>
+                            <button onclick='sendMail()' class="button formSubmit submit">Enviar Idea</button>
                         </form>
                     </div>
                 </div>
@@ -481,6 +488,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
         <!--=============== ScrollReveal ===============-->
         <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== SweetAlert ===============-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!--=============== Language ===============-->
         <script src="assets/js/lang.js"></script>
         <!--=============== Typing ===============-->

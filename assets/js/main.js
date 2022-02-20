@@ -1,3 +1,6 @@
+/**
+ * @author Camilo Valencia
+ */
 /*========================= SCROLL SECTIONS ACTIVE LINK =========================*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -57,7 +60,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
 
 
 /*=============== TYPED ===============*/
@@ -131,8 +133,15 @@ sr.reveal(`.work__card`,{origin:'bottom'})
 sr.reveal(`.group`,{distance:"100px",origin:'left',reset:true})
 sr.reveal(`.target`,{distance:"90px",origin:'bottom',reset:true})
 sr.reveal(`.chevrons`,{distance:"50px",origin:'top',reset:true})
-
-
+/*Contact*/
+sr.reveal(`.titleContact`,{origin:'bottom'})
+sr.reveal(`.contactText`,{origin:'top'})
+sr.reveal(`.waycontactTitle`)
+sr.reveal(`.contact__card1`,{origin:'left',delay:50})
+sr.reveal(`.contact__card2`,{origin:'right',delay:80})
+sr.reveal(`.contact__card3`,{origin:'left',delay:100})
+sr.reveal(`.formcontactTitle`)
+sr.reveal(`.contact__form`)
 
 /*=============== LOADING ANIMATION ===============*/
 /*If we don't put this function, the navbar isn't gonna work, will be blocked*/
@@ -199,7 +208,6 @@ let mixerPortfolio = mixitup('.work__container', {
       duration: 0
   }
 });
-
 /*Link active work*/
 const linkWork = document.querySelectorAll('.work__item')
 
@@ -208,3 +216,63 @@ function activeWork(){
   this.classList.add('active-work')
 }
 linkWork.forEach(l=>l.addEventListener('click',activeWork))
+
+
+/*=============== FORM ===============*/
+function validate(){
+  let name = document.querySelector(".username")
+  let email = document.querySelector(".emailuser")
+  let msg = document.querySelector(".messageuser")
+  let submit = document.querySelector(".submit")
+  submit.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let emailValido=expReg.test(email.value); 
+    if(name.value != "" && email.value != "" && msg.value!= ""){
+      if(emailValido==true){
+        sendMail(name.value,email.value,msg.value);
+        success();
+      }
+      else{
+        mailError(); 
+      }
+    }
+    else{
+      inputEmpty();
+    }
+  })
+}
+validate();
+
+
+function sendMail(name,email,msg){
+  emailjs.send("service_kqglwjj","template_5t7weyj",{
+    from_name: name,
+    to_name: email,
+    message: msg,
+    });
+}
+function success(){
+  swal({
+    title:"Mensaje enviado!",
+    text:"Muy pronto recibirás una respuesta",
+    icon:"success",
+    button:"Ok"
+  });
+}
+function inputEmpty(){
+  swal({
+    title:"Oops!",
+    text:"Debes completar todos los campos",
+    icon:"error",
+    button:"Ok"
+  });
+}
+function mailError(){
+  swal({
+    title:"Hmmm...",
+    text:"Revisa el correo electrónico",
+    icon:"warning",
+    button:"Ok"
+  });
+}
