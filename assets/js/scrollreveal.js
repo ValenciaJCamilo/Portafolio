@@ -1,0 +1,59 @@
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin:'top',
+    distance:'60px',
+    duration:1400,
+    delay:0,
+    //reset:true,
+})
+
+/*sr.reveal(`.home__name`,{delay:500,origin:'left',distance:'20px',})*/
+sr.reveal(`.home__greeting`)
+sr.reveal(`.home__name`,{delay:500,distance:"30px",origin:'bottom'})
+sr.reveal(`.home__education`,{delay:1000})
+sr.reveal(`.letters`,{delay:500,distance:"50px",origin:'top'})
+sr.reveal(`.circle-half`,{delay:500,distance:"100px",origin:'top',reset:true})
+sr.reveal(`.square`,{delay:1000,distance:"90px",origin:'right',reset:true})
+sr.reveal(`.arrow`,{delay:1500,distance:"320px",origin:'left',reset:true})
+sr.reveal(`.home__buttons`,{delay:1800})
+sr.reveal(`.home__handle`,{delay:1800})
+sr.reveal(`.home__social`,{delay:1800,origin:'bottom'})
+/*About*/
+sr.reveal(`.titleAbout`,{origin:'bottom'})
+sr.reveal(`.about__image`,{origin:'left'})
+sr.reveal(`.about__info`,{origin:'right'})
+sr.reveal(`.aboutMsg1`,{origin:'right',distance:"200px",delay:200})
+sr.reveal(`.aboutMsg2`,{origin:'left',distance:"200px",delay:400})
+sr.reveal(`.palette`,{distance:"100px",origin:'left',reset:true})
+sr.reveal(`.hive`,{distance:"90px",origin:'bottom',reset:true})
+sr.reveal(`.happy`,{distance:"200px",origin:'top',reset:true})
+/*Skills*/
+sr.reveal(`.titleSkills`,{origin:'bottom'})
+sr.reveal(`.skills__image`,{origin:'top',delay:100,distance:"150px"})
+sr.reveal(`.skills__info`,{origin:'left'})
+sr.reveal(`.skillsButtonContainer`)
+sr.reveal(`.skills__content`,{origin:'bottom',delay:200})
+sr.reveal(`.skillsMsg1`,{origin:'right',distance:"200px",delay:50})
+sr.reveal(`.skillsMsg2`,{origin:'left',distance:"200px",delay:50})
+sr.reveal(`.skillsMsg3`,{origin:'right',distance:"200px",delay:50})
+sr.reveal(`.pyramid`,{distance:"100px",origin:'left',reset:true})
+sr.reveal(`.extension`,{distance:"300px",origin:'bottom',reset:true})
+sr.reveal(`.plus`,{distance:"200px",origin:'top',reset:true})
+/*Work*/
+sr.reveal(`.titlePortafolio`,{origin:'bottom'})
+sr.reveal(`.work__filters`,{origin:'top'})
+sr.reveal(`.work__card`,{origin:'bottom'})
+sr.reveal(`.group`,{distance:"100px",origin:'left',reset:true})
+sr.reveal(`.target`,{distance:"90px",origin:'bottom',reset:true})
+sr.reveal(`.chevrons`,{distance:"50px",origin:'top',reset:true})
+/*Contact*/
+sr.reveal(`.titleContact`,{origin:'bottom'})
+sr.reveal(`.contactText`,{origin:'top'})
+sr.reveal(`.waycontactTitle`)
+sr.reveal(`.contact__card1`,{origin:'left',delay:50})
+sr.reveal(`.contact__card2`,{origin:'right',delay:80})
+sr.reveal(`.contact__card3`,{origin:'left',delay:100})
+sr.reveal(`.formcontactTitle`)
+sr.reveal(`.contact__form`)
+
