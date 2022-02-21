@@ -2,7 +2,7 @@
 /*=============== TYPED ===============*/
 const typed = new Typed('.typed', {
 	strings: [
-		'<i class="homeEducation1">Estudiante de Ingeniería de Sistemas</i>',
+		'<i class="homeEducation1">Ingeniero de Sistemas en formación</i>',
 		'<i class="homeEducation2">Desarrollador Frontend</i>'
 	],
 
